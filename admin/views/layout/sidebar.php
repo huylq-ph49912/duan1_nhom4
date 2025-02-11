@@ -30,7 +30,14 @@
             </p>
           </a>
         </li>
-        
+        <li class="nav-item">
+          <a href="<?= BASE_URL_ADMIN . '/?act=don-hang' ?>" class="nav-link">
+            <i class="nav-icon fas fa-file-alt"></i>
+            <p style="color: white;">
+              Đơn Hàng
+            </p>
+          </a>
+        </li>
       </ul>
     </nav>
     <!-- /.sidebar-menu -->

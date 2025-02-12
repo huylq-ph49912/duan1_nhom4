@@ -31,6 +31,16 @@
           </a>
         </li>
         <li class="nav-item">
+
+          <a href="<?= BASE_URL_ADMIN . '/?act=san-pham' ?>" class="nav-link">
+            <i class="nav-icon fas fa-home"></i>
+            <p style="color: white;">
+               Sản Phẩm
+            </p>
+          </a>
+        </li>
+        
+
           <a href="<?= BASE_URL_ADMIN . '/?act=don-hang' ?>" class="nav-link">
             <i class="nav-icon fas fa-file-alt"></i>
             <p style="color: white;">
@@ -38,6 +48,7 @@
             </p>
           </a>
         </li>
+
       </ul>
     </nav>
     <!-- /.sidebar-menu -->

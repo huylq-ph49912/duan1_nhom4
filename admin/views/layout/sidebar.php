@@ -31,8 +31,17 @@
           </a>
         </li>
         <li class="nav-item">
+          <a href="<?= BASE_URL_ADMIN . '?act=danh-muc' ?>" class="nav-link">
+            <i class="nav-icon fas fa-th"></i>
+            <p style="color: white;">
+               Danh Mục
+            </p>
+          </a>
+        </li>
 
-          <a href="<?= BASE_URL_ADMIN . '/?act=san-pham' ?>" class="nav-link">
+        <li class="nav-item">
+
+          <a href="<?= BASE_URL_ADMIN . '?act=san-pham' ?>" class="nav-link">
             <i class="nav-icon fas fa-home"></i>
             <p style="color: white;">
                Sản Phẩm
@@ -40,8 +49,8 @@
           </a>
         </li>
         
-
-          <a href="<?= BASE_URL_ADMIN . '/?act=don-hang' ?>" class="nav-link">
+        <li class="nav-item">
+          <a href="<?= BASE_URL_ADMIN . '?act=don-hang' ?>" class="nav-link">
             <i class="nav-icon fas fa-file-alt"></i>
             <p style="color: white;">
               Đơn Hàng

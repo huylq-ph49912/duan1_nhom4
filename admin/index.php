@@ -8,13 +8,13 @@ require_once '../commons/function.php'; // Hàm hỗ trợ
 // Require toàn bộ file Controllers
 
 // require_once 'controllers/DashboardController.php';
-require_once 'controllers/AdminSanPhamController.php';
-require_once 'controllers/AdminDanhMucController.php';
+require_once './controllers/AdminSanPhamController.php';
+require_once './controllers/AdminDanhMucController.php';
 require_once './controllers/AdminDonHangController.php';
 
 // Require toàn bộ file Models
-require_once 'models/AdminSanPham.php';
-require_once 'models/AdminDanhMuc.php';
+require_once './models/AdminSanPham.php';
+require_once './models/AdminDanhMuc.php';
 require_once './models/AdminDonHang.php';
 
 // require_once 'controllers/DashboardController.php';
@@ -26,11 +26,27 @@ $act = $_GET['act'] ?? '/';
 
 match ($act) {
     // Dashboards
+    
+    // '/'                 => (new DashboardController())->index(),
+    // Rout Danh Mục
+    'danh-muc' => (new AdminDanhMucController())->danhSachDanhMuc(),// Hiển Thị 
+    'from-them-danh-muc' => (new AdminDanhMucController())->fromAddDanhMuc(),// Thêm 
+    'them-danh-muc' => (new AdminDanhMucController())->postAddDanhMuc(),
+    'from-edit-danh-muc' => (new AdminDanhMucController())->fromEditDanhMuc(),// Sửa
+    'edit-danh-muc' => (new AdminDanhMucController())->postEditDanhMuc(),
+    'delete-danh-muc' => (new AdminDanhMucController())->deleteDanhMuc(), //Xóa
 
-    '/'                 => (new DashboardController())->index(),
-    // San Pham
-    'san-pham'         => (new AdminSanPhamController())->danhSachSanPham(),
-    'from-them-san-pham' => (new AdminSanPhamController())->fromAddSanPham(),
+    // Rout Sản Phẩm
+    'san-pham' => (new AdminSanPhamController())->danhSachSanPham(),// Hiển Thị 
+    'from-them-san-pham' => (new AdminSanPhamController())->fromAddSanPham(),// Thêm 
+    'them-san-pham' => (new AdminSanPhamController())->postAddSanPham(),
+    'from-edit-san-pham' => (new AdminSanPhamController())->fromEditSanPham(),// Sửa
+    'edit-san-pham' => (new AdminSanPhamController())->postEditSanPham(),
+    'edit-album-anh-san-pham' => (new AdminSanPhamController())->postEditAnhSanPham(),
+    'delete-san-pham' => (new AdminSanPhamController())->deleteSanPham(), //Xóa
+    'chi-tiet-san-pham' => (new AdminSanPhamController())->detailSanPham(),// Chi Tiết Sản Phẩm
+
+
 
     // Rout Đơn Hàng
     'don-hang' => (new AdminDonHangController())->danhSachDonHang(),// Hiển Thị 

@@ -25,7 +25,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <a href="<?= BASE_URL_ADMIN. '/?act=from-them-san-pham' ?>"><button class="btn btn-success">Thêm Sản Phẩm Mới</button></a>
+                            <a href="<?= BASE_URL_ADMIN. '?act=from-them-san-pham' ?>"><button class="btn btn-success">Thêm Sản Phẩm Mới</button></a>
                         </div>
                         <!-- card-header -->
                          <div class="card-body">
@@ -54,13 +54,13 @@
                                             <td><?= $sanPham['trang_thai'] == 1 ? 'Còn Hàng' : 'Hết Hàng' ?></td>
                                             <td>
                                                 <div class="btn-group">
-                                                    <a href="#">
+                                                    <a href="<?= BASE_URL_ADMIN. '/?act=chi-tiet-san-pham&id_san_pham=' .$sanPham['id']?>">
                                                         <button class="btn btn-primary"><i class="fas fa-eye"></i></button>
                                                     </a>
-                                                    <a href="#">
+                                                    <a href="<?= BASE_URL_ADMIN. '/?act=from-edit-san-pham&id_san_pham=' .$sanPham['id']?>">
                                                         <button class="btn btn-warning"><i class="fas fa-wrench"></i></button>
                                                     </a>
-                                                    <a href="#" 
+                                                    <a href="<?= BASE_URL_ADMIN. '/?act=delete-san-pham&id_san_pham=' .$sanPham['id']?>" 
                                                     onclick="return confirm('bạn có muốn xoá sản phẩm này không?')">
                                                         <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
                                                     </a>

@@ -1,5 +1,5 @@
-<?php require_once('layout/header.php'); ?>
-<?php require_once('layout/menu.php'); ?>
+<?php require_once('./views/layout/header.php'); ?>
+<?php require_once('./views/layout/menu.php'); ?>
 <?php if (isset($_SESSION['success_message'])): ?>
     <div
         style="background-color: #d4edda; color: #155724; padding: 10px; border: 1px solid #c3e6cb; border-radius: 5px; margin: 10px 0;">
@@ -259,4 +259,4 @@
     </div>
 </main>
 
-<?php require_once('layout/footer.php'); ?>
+<?php require_once('./views/layout/footer.php'); ?>
